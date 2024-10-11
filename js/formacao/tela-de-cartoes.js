@@ -1,10 +1,11 @@
 export async function criarCartoes() {
-    let sectionCartoes = document.getElementById('cartoes')
+    let sectionCartoes = document.getElementById('cartao')
 
-    try{
+    try {
         const response = await fetch('http://localhost:3000/produtos')
         const data = await response.json();
         const produtos = data.produtos;
+
         for (let i = 0; i < produtos.length; i++) {
             let cartao = document.createElement('div');
             cartao.className = 'cartao'
@@ -14,14 +15,34 @@ export async function criarCartoes() {
             h3.textContent = produtos[i].valores
             let img = document.createElement('img')
             img.src = produtos[i].img
-    
+
+            let button = document.createElement('button')
+            button.className = 'button_card';
+            button.textContent = 'EXCLUIR'
+            button.addEventListener('click', ()=>{})
+
+            button.addEventListener('click', () => {
+
+
+            })
             cartao.appendChild(h1);
             cartao.appendChild(img)
             cartao.appendChild(h3);
-    
-            sectionCartoes.appendChild(cartao);}
-        }catch(e){
+            cartao.appendChild(button)
+
+
+            sectionCartoes.appendChild(cartao);
+        }
+    } catch (e) {
         alert(e)
     }
-   
+let cartaoAdd = document.createElement('button')
+cartaoAdd.className = 'cartao'
+cartaoAdd.textContent = '+'
+sectionCartoes.appendChild(cartaoAdd)
 }
+
+
+
+
+
