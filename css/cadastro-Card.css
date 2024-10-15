@@ -1,16 +1,21 @@
-#telaCadastro{
+#telaCadastro {
     width: 100vw;
     height: 100vh;
+
     position: fixed;
     top: 0;
-    left:0;
-background-color: rgba(0, 0, 0, 0,2);
-display: flex;
-justify-content: center;
-align-items: center;
+    left: 0;
+
+    background-color: rgba(0, 0, 0, 0, 2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.2s ease-in-out;
 }
 
-#inputs_cad{
+#inputs_cad {
     width: 30vw;
     height: 50vh;
 
@@ -25,8 +30,14 @@ align-items: center;
     padding: 5vh 0;
 
 }
-#buttons_telaCad{
+
+#buttons_telaCad {
     width: 15vw;
     display: flex;
-    justify-content: space-between      ;
+    justify-content: space-between;
+}
+
+#cartao {
+    display: grid;
+    grid-template-columns: 20vw 20vw 20vw 20vw;
 }
