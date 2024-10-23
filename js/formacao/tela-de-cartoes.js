@@ -19,10 +19,7 @@ export async function criarCartoes() {
             let button = document.createElement('button')
             button.className = 'button_card';
             button.textContent = 'EXCLUIR'
-            button.addEventListener('click', ()=>{})
-
-            button.addEventListener('click', () => {
-
+            button.addEventListener('click', ()=>{
 
             })
             cartao.appendChild(h1);
