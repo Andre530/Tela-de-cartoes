@@ -1,3 +1,5 @@
+import { excluirCartoes } from ".";
+
 export async function criarCartoes() {
     let sectionCartoes = document.getElementById('cartao')
 
@@ -19,8 +21,8 @@ export async function criarCartoes() {
             let button = document.createElement('button')
             button.className = 'button_card';
             button.textContent = 'EXCLUIR'
-            button.addEventListener('click', ()=>{
-
+            button.addEventListener('click', () => {
+                excluirCartoes(i)
             })
             cartao.appendChild(h1);
             cartao.appendChild(img)
@@ -33,13 +35,13 @@ export async function criarCartoes() {
     } catch (e) {
         alert(e)
     }
-let cartaoAdd = document.createElement('button')
-cartaoAdd.className = 'cartao'
-cartaoAdd.textContent = '+'
-cartaoAdd.addEventListener('click', ()=>{
-    mostrarTelaCad()
-})
-sectionCartoes.appendChild(cartaoAdd)
+    let cartaoAdd = document.createElement('button')
+    cartaoAdd.className = 'cartao'
+    cartaoAdd.textContent = '+'
+    cartaoAdd.addEventListener('click', () => {
+        mostrarTelaCad()
+    })
+    sectionCartoes.appendChild(cartaoAdd)
 }
 
 
