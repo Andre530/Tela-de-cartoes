@@ -36,6 +36,9 @@ export async function criarCartoes() {
 let cartaoAdd = document.createElement('button')
 cartaoAdd.className = 'cartao'
 cartaoAdd.textContent = '+'
+cartaoAdd.addEventListener('click', ()=>{
+    mostrarTelaCad()
+})
 sectionCartoes.appendChild(cartaoAdd)
 }
 
