@@ -4,7 +4,7 @@ export async function criarCartoes() {
     let sectionCartoes = document.getElementById('cartao')
 
     try {
-        const response = await fetch('http://localhost:3000/produtos')
+        const response = await fetch('https://back-end-bay-gamma.vercel.app/produtos')
         const data = await response.json();
         const produtos = data.produtos;
 

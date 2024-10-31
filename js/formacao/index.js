@@ -6,17 +6,16 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 export async function excluirCartoes(index) {
-    try{
-        const response = await fetch ('http://localhost:3000/produtos', {
-            method 'DELETE'
+    try {
+        const response = await fetch('https://back-end-bay-gamma.vercel.app/produtos', {
+            method: 'DELETE',
             headers: {
-                'Content-Type' : 'applications/json'
-
-            }
-            body: JSON.stringify({cartao: index})
-        })
-        criarCartoes()
+                'Content-Type': 'application/json' 
+            },
+            body: JSON.stringify({ cartao: index })
+        });
+        criarCartoes();
+    } catch (e) {
+        console.log(e);
     }
-    catch(e)
-    console.log(e)
 }
