@@ -1,4 +1,4 @@
-import { criarCartoes } from "./tela-de-cartoes.js"
+import { criarCartoes } from "./tela_de_cartoes.js"
 
 
 document.addEventListener("DOMContentLoaded", () => {

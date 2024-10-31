@@ -1,4 +1,3 @@
-import { excluirCartoes } from ".";
 
 export async function criarCartoes() {
     let sectionCartoes = document.getElementById('cartao')
@@ -6,7 +5,7 @@ export async function criarCartoes() {
     try {
         const response = await fetch('https://back-end-bay-gamma.vercel.app/produtos')
         const data = await response.json();
-        const produtos = data.produtos;
+        const produtos = data.cartoes;
 
         for (let i = 0; i < produtos.length; i++) {
             let cartao = document.createElement('div');
