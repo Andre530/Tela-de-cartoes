@@ -7,10 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 export async function excluirCartoes(index) {
     try {
-        const response = await fetch('https://back-end-bay-gamma.vercel.app/produtos', {
+        const response = await fetch('https://novo-dominio.com/produtos', {
+
             method: 'DELETE',
             headers: {
-                'Content-Type': 'application/json' 
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify({ cartao: index })
         });
